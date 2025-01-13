@@ -5,6 +5,8 @@
     --blue: #006DB7;
     --grønn: #00AF4D;
     --white: #FFFFFF;
+    --back: #000000;
+
 
 }
 html, body {
@@ -17,6 +19,9 @@ body {
     background-image: url("website_images/mainbackground.png");
     font-family: "Rubik", serif;
     font-size: 20px;
+}
+header, article, div, aside, footer, main, section {
+    box-sizing: border-box;
 }
 
 #content {
@@ -49,9 +54,15 @@ header {
             background-color: var(--red);
             color: var(--white);
             text-align: center;
-            width: 30px;
+            width: 20px;
             height: 30px;
             border-radius: 50%;
+            display: block;
+            padding-top: 4px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 9px;
+            left: -7px;
         }
 
         img {
@@ -63,5 +74,83 @@ header {
     nav {
         width: 100%;
         background-color: var(--red);
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        a{
+            text-transform: uppercase;
+            color: var(--white);
+            padding: calc(0.5rem + 4px) 1rem;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 4px solid var(--red);
+        }
+
+        a:hover {
+            background: var(--yellow);
+            color: var(--back);
+            border-bottom: 4px solid var(--back);
+
+            }
+        }
+    }
+
+}
+
+main {
+    #productlist {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+     }
+
+    h2{
+        width: 100%;
+        display: block;
+        font-size: 2.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    article {
+        width: calc(33% - 1rem);
+        background-color: var(--back);
+        padding: 1rem;
+        color: var(--white);
+        border-bottom: 1rem solid var(--grønn);
+
+        img {
+            max-width: 100%;
+            
+        }
+
+        a{
+            color: var(--yellow);
+            text-decoration: none;
+
+        }
+        h3 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 0;
+        }
+
+        button {
+            font-family: "Rubik", serfi;
+            font-size: 1rem;
+            background: var(--grønn);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border: none;
+        }
     }
 }
